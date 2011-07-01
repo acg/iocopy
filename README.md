@@ -4,7 +4,7 @@
 
 The program [tcpforward](https://github.com/acg/tcpforward) is a small netcat-like utility for forwarding and tunneling tcp streams. Remote assistance to someone behind a NAT is a common use case. See the article [Bouncing, Hopping and Tunneling with tcpforward](http://acg.github.com/2011/02/07/bouncing-hopping-tunneling-with-tcpforward.html) for some other use cases (including ways to stick it to the man).
 
-Unfortunately, tcpforward has a long-standing bug: it's written in Perl. It should be written in C. Even better, it could be written in the UNIX factoring tradition: write as few lines of code as possible, reuse other small programs wherever possible. The result is often itself a small generic program (for some reason).
+Unfortunately, tcpforward has a long-standing bug: it's written in Perl. It should be written in C. Even better, it could be written in the UNIX factoring tradition: write as few lines of code as possible, reuse other small generic programs wherever possible. Often, the result of this approach is another small generic program.
 
 54 lines of code should be enough for anyone, right?
 
@@ -57,14 +57,14 @@ Here are examples from the tcpforward article, reformulated to use only ucspi-tc
 
 Run the following on "moon":
 
-    tcpserver -c 1 -v 127.0.0.1 9922 \
+    tcpserver -c 1 -v moon 9922 \
     sh -c 'exec 6>&0 7>&1 "$0" "$@"' \
-    tcpserver -c 1 -v 127.0.0.1 9921 \
+    tcpserver -c 1 -v moon 9921 \
     ./iocopy v 0 7 6 1
 
 On the destination machine:
 
-    tcpclient -v 127.0.0.1 9922 \
+    tcpclient -v moon 9922 \
     sh -c 'exec 0>&6 1>&7 "$0" "$@"' \
     tcpclient -v 127.0.0.1 22 \
     ./iocopy v 0 7 6 1
@@ -73,11 +73,33 @@ On the source machine:
 
     ssh -p 9921 moon
 
-### Example: TCP port forwarding ###
+### Example: Hopping Over the Middleman ###
 
-    tcpserver -c 1 -v $srchost $srcport \
-    tcpclient -v $dsthost $dstport \
+On host "gateway":
+
+    tcpserver -c 1 -v 0 9922 \
+    tcpclient -v production 22 \
     ./iocopy v 0 7 6 1
+
+On your local machine:
+
+    scp -o Port=9922 somefile gateway:somefile
+
+Or:
+
+    rsync -e "ssh -p 9922" -avzp somedir/ gateway:somedir/
+
+### Example: Tunneling Through Corporate Firewalls ###
+
+On host "freedom":
+
+    tcpserver -c 1 -v 0 443 \
+    tcpclient -v 127.0.0.1 22 \
+    ./iocopy v 0 7 6 1
+
+On your local machine:
+
+    ssh -p 443 freedom
 
 ## Author ##
 
