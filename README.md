@@ -2,9 +2,9 @@
 
 ## Motivation ##
 
-The program [tcpforward](https://github.com/acg/tcpforward) is a small netcat-like utility for forwarding and tunneling tcp streams. Remote assistance to someone behind a NAT is a common use case. See the article [Bouncing, Hopping and Tunneling with tcpforward](http://acg.github.com/2011/02/07/bouncing-hopping-tunneling-with-tcpforward.html) for some other use cases, including ways to stick it to the man.
+The program [tcpforward](https://github.com/acg/tcpforward) is a small netcat-like utility for forwarding and tunneling tcp streams. Remote assistance to someone behind a NAT is a common use case. See the article [Bouncing, Hopping and Tunneling with tcpforward](http://acg.github.com/2011/02/07/bouncing-hopping-tunneling-with-tcpforward.html) for some other use cases (including ways to stick it to the man).
 
-Unfortunately, tcpforward has a long-standing bug: it's written in Perl. It should be written in C. Even better, it could be written in the UNIX factoring tradition: write as few lines of code as possible, reuse other small programs wherever possible. (For some reason the result is often a generic tool.)
+Unfortunately, tcpforward has a long-standing bug: it's written in Perl. It should be written in C. Even better, it could be written in the UNIX factoring tradition: write as few lines of code as possible, reuse other small programs wherever possible. The result is often itself a small generic program (for some reason).
 
 54 lines of code should be enough for anyone, right?
 
@@ -30,9 +30,9 @@ This copies data from stdin to file descriptor 7, while also copying data from f
 
 ## The Implementation ##
 
-The implementation uses only the standard C library. No fancy libraries like libevent or libev, just a straight up select(2) loop with a fixed ceiling on the number of fd pairs.
+The implementation uses only the standard C library. No fancy libraries like libevent or libev, just a straight up select(2) loop with a fixed limit on the number of fd pairs.
 
-The code isn't obfuscated C but it would also be a stretch to say it fits comfortably in a 54x80 terminal window.
+The code isn't obfuscated C, but it would also be a stretch to say it fits comfortably in a 54x80 terminal window.
 
   * 8 lines of #includes (boo...)
   * 8 lines of argument processing and setup
