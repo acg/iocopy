@@ -1,5 +1,7 @@
 # iocopy - an async io engine in 54 lines of C #
 
+To be presented at the [54lines meetup on July 12, 2011 in NYC](http://www.meetup.com/54lines/events/20962661/).
+
 ## Motivation ##
 
 The program [tcpforward](https://github.com/acg/tcpforward) is a small netcat-like utility for forwarding and tunneling tcp streams. Remote assistance to someone behind a NAT is a common use case. See the article [Bouncing, Hopping and Tunneling with tcpforward](http://acg.github.com/2011/02/07/bouncing-hopping-tunneling-with-tcpforward.html) for some other use cases (including ways to stick it to the man).
@@ -104,5 +106,6 @@ On your local machine:
 ## Author ##
 
 Alan Grow <alangrow+nospam@gmail.com>
+
 Released under the BSD License
 
