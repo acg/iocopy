@@ -1,0 +1,137 @@
+body {
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 100%;
+  height:100%;
+  background: #ddd;
+  color: #000;
+}
+
+#header, #footer {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  height: 80px;
+}
+
+#header {
+  margin-top: -400px;
+}
+
+#footer {
+  margin-top: 320px;
+}
+
+#header h1 {
+  font-size: 60px;
+}
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  width: 1024px;
+  text-align: center;
+}
+
+#slides {
+  position: absolute;
+  width: 1024px;
+  height: 640px;
+  left: 50%;
+  top: 50%;
+  margin-left: -512px;
+  margin-top: -320px;
+  background-color: #fff;
+  border: 1px solid #000;
+}
+
+.slide {
+  margin: 40px 64px;
+}
+
+.nav-pager,
+.nav-prev-next {
+  margin: 4px 16px;
+}
+
+.nav-pager > li,
+.nav-prev-next > li {
+  float: left;
+  padding: 8px 12px;
+  margin: 4px;
+  background: #aaa;
+}
+
+.nav-prev-next {
+  float: right;
+}
+.nav-pager {
+  float: left;
+}
+
+
+/* Styling the slides themselves - specific to the presentation */
+
+#slides {
+  font-size: 24px;
+}
+
+#slides h1 {
+  font-size: 48px;
+  margin-bottom: 40px;
+  border-bottom: 4px solid #aaa;
+}
+
+#slides h2 {
+  font-size: 32px;
+}
+
+#slides h3 {
+  font-size: 24px;
+}
+
+#slides li {
+  list-style-type: disc;
+}
+
+#slides p {
+  margin: 20px 0px;
+}
+
+#slides ol,
+#slides ul {
+  margin: 20px 40px;
+}
+
+#slides code, 
+#slides blockquote {
+  margin-left: 40px;
+}
+
+#slides code {
+  font-family: monospace;
+}
+
+/* Per-slide styling - specific to the presentation */
+
+#slide-cover li {
+  list-style-type: none;
+}
+
+#slide-thanks img {
+  height: 240px;
+}
+
+#slide-thanks #col1,
+#slide-thanks #col2 {
+  width: 50%;
+  margin-top: 40px;
+}
+
+#slide-thanks #col1 {
+  float: left;
+}
+
+#slide-thanks #col2 {
+  float: right;
+}
+
