@@ -56,8 +56,8 @@
 						$presentation.slideToShow.fadeIn(500)
 				}
 				        
-        $presentation.find('.'+$presentation.options.pagerClass).children('.current').removeClass('current');
-        $presentation.find('.'+$presentation.options.pagerClass).children(':nth-child('+newSlide+')').addClass('current');
+        $('.'+$presentation.options.pagerClass).children('.current').removeClass('current');
+        $('.'+$presentation.options.pagerClass).children(':nth-child('+newSlide+')').addClass('current');
       };
       
       //Handle clicking of a specific slide
