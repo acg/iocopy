@@ -91,10 +91,10 @@
         $('.'+$presentation.options.pagerClass).html(navPager);
         
         if($presentation.currentHash) {
-          $presentation.find('.'+$presentation.options.pagerClass).children(':nth-child('+$presentation.currentHash+')').addClass('current');
+          $('.'+$presentation.options.pagerClass).children(':nth-child('+$presentation.currentHash+')').addClass('current');
           $presentation.count = $presentation.currentHash;
         } else {
-          $presentation.find('.'+$presentation.options.pagerClass).children(':first-child').addClass('current');
+          $('.'+$presentation.options.pagerClass).children(':first-child').addClass('current');
           $presentation.count = 1;
         }
 
