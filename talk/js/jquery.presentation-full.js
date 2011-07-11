@@ -84,11 +84,11 @@
         $presentation.numSlides = $presentation.slides.length;
         
         //Add in the pager
-        var navPager = '<ol class="'+$presentation.options.pagerClass+'">';
+        var navPager = '';
         for(var i = 1; i < $presentation.numSlides+1; i++) {
           navPager += '<li><a href="#'+i+'">'+i+'</a></li>';
         }
-        $presentation.append(navPager);
+        $('.'+$presentation.options.pagerClass).html(navPager);
         
         if($presentation.currentHash) {
           $presentation.find('.'+$presentation.options.pagerClass).children(':nth-child('+$presentation.currentHash+')').addClass('current');
@@ -99,15 +99,15 @@
         }
 
         //Add in the previous/next links
-        $presentation.append('<ul class="'+$presentation.options.prevNextClass+'"><li><a href="#prev" class="prev">'+$presentation.options.prevText+'</a></li><li><a href="#next" class="next">'+$presentation.options.nextText+'</a></li>');
+        $('.'+$presentation.options.prevNextClass).html('<li><a href="#prev" class="prev">'+$presentation.options.prevText+'</a></li><li><a href="#next" class="next">'+$presentation.options.nextText+'</a></li>');
         
         //When a specific page is clicked, go to that page
-        $presentation.find('.'+$presentation.options.pagerClass).find('a').bind('click', function() {
+        $('.'+$presentation.options.pagerClass).find('a').bind('click', function() {
           $presentation.pageClick($(this));
         });
         
         //When you click a previous/next link
-        $presentation.find('.'+$presentation.options.prevNextClass).find('a').click(function() {
+        $('.'+$presentation.options.prevNextClass).find('a').click(function() {
           $presentation.prevNextClick($(this).attr('class'));
           return false;
         });
