@@ -28,17 +28,17 @@ body {
 .container {
   margin-left: auto;
   margin-right: auto;
-  width: 1024px;
+  width: 800px;
   text-align: center;
 }
 
 #slides {
   position: absolute;
-  width: 1024px;
+  width: 800px;
   height: 640px;
   left: 50%;
   top: 50%;
-  margin-left: -512px;
+  margin-left: -400px;
   margin-top: -320px;
   background-color: #fff;
   border: 1px solid #000;
@@ -56,9 +56,14 @@ body {
 .nav-pager > li,
 .nav-prev-next > li {
   float: left;
-  padding: 8px 12px;
   margin: 4px;
+  padding: 8px 0px;
   background: #aaa;
+}
+
+.nav-pager > li > a,
+.nav-prev-next > li > a {
+  padding: 0px 8px;
 }
 
 .nav-prev-next {
