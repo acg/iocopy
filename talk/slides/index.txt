@@ -1,6 +1,7 @@
 cover.md
 tcpforward-intro.md
 tcpforward-problem.md
+tcpforward-problem-2.md
 tcpforward-54lines.md
 specification-core.md
 specification-cli-q.md
