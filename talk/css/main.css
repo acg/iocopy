@@ -61,6 +61,10 @@ body {
   background: #aaa;
 }
 
+.nav-pager > li.current {
+  background: #fff;
+}
+
 .nav-pager > li > a,
 .nav-prev-next > li > a {
   padding: 0px 8px;
@@ -69,6 +73,7 @@ body {
 .nav-prev-next {
   float: right;
 }
+
 .nav-pager {
   float: left;
 }
