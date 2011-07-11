@@ -4,6 +4,7 @@
 
 * it's written in Perl
 * it should be written in C
-* even better, rewrite it in the unix factoring tradition
-* small, generic program
+* even better: rewrite as a small, generic unix program
+* reuse other programs
+* less is more!
 

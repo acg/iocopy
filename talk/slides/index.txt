@@ -8,6 +8,7 @@ specification-cli-q.md
 specification-cli-a.md
 specification-iocopy-0-1-q.md
 specification-iocopy-0-1-a.md
+specification-iocopy-0-1-6-7.md
 implementation-producer-consumer.md
 implementation-clibs.md
 implementation-csource.md

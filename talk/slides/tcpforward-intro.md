@@ -10,6 +10,6 @@
 
 * remote assistance to someone behind a NAT
 * port forwarding
-* getting past corporate firewalls
-* see the [tcpforward article](http://acg.github.com/2011/02/07/bouncing-hopping-tunneling-with-tcpforward.html)
+* proxying
+* see the [tcpforward article](http://acg.github.com/2011/02/07/bouncing-hopping-tunneling-with-tcpforward.html) for more
 

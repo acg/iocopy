@@ -1,6 +1,6 @@
 # Implementation #
 
-Not obfuscated C per se .... Stats:
+Not obfuscated C per se... Some stats:
 
 * 8 lines of #includes (boo...)
 * 8 lines of argument processing and setup

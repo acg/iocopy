@@ -45,7 +45,6 @@ body {
 }
 
 .slide {
-  margin: 40px 64px;
   position: absolute;
 }
 
@@ -81,6 +80,14 @@ body {
   font-size: 24px;
 }
 
+.slide {
+  width: 640px;
+}
+
+.slide {
+  margin: 40px 64px;
+}
+
 #slides h1 {
   font-size: 48px;
   margin-bottom: 40px;
@@ -113,14 +120,42 @@ body {
   margin-left: 40px;
 }
 
+#slides p code,
+#slides ol code,
+#slides ul code {
+  margin-left: 0px;
+}
+
 #slides code {
   font-family: monospace;
+  font-size: 20px;
 }
 
 /* Per-slide styling - specific to the presentation */
 
+#slide-cover ul {
+  margin-left: 0px;
+}
+
 #slide-cover li {
   list-style-type: none;
+}
+
+#slide-cover img {
+  width: 400px;
+  margin-top: 40px;
+}
+
+#slide-cover .diagram,
+#slide-specification-cli-q .diagram,
+#slide-specification-cli-a .diagram {
+  text-align: center;
+  padding: 10px 0px;
+}
+
+#slide-specification-cli-q img,
+#slide-specification-cli-a img {
+  width: 440px;
 }
 
 #slide-thanks img {
@@ -131,6 +166,7 @@ body {
 #slide-thanks #col2 {
   width: 50%;
   margin-top: 40px;
+  text-align: center;
 }
 
 #slide-thanks #col1 {
@@ -139,5 +175,9 @@ body {
 
 #slide-thanks #col2 {
   float: right;
+}
+
+#slide-thanks p {
+  text-align: center;
 }
 
