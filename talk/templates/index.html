@@ -1,0 +1,41 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+  <link rel="stylesheet" href="css/reset.css" type="text/css" />
+  <link rel="stylesheet" href="css/main.css" type="text/css" />
+
+  <script type="text/javascript" src="js/jquery.js"></script>
+  <script type="text/javascript" src="js/jquery.presentation.js"></script>
+  <script type="text/javascript" src="js/jquery.main.js"></script>
+
+  <title>{{ page.title |e }}</title>
+
+</head>
+<body>
+
+  <div id="header">
+    <div class="container">
+      <h1>{{ page.title |e }}</h1>
+    </div>
+  </div>
+
+  <div id="slides">
+    {% for slide in slides %}
+    <div id="slide-{{ slide.name }}" class="slide">
+      {{ slide.content }}
+    </div>
+    {% endfor %}
+  </div>
+
+  <div id="footer">
+    <div class="container">
+      <ol class="nav-prev-next"></ol>
+      <ol class="nav-pager"></ol>
+    </div>
+  </div>
+
+</body>
+</html>
+
