@@ -163,6 +163,10 @@ body {
   width: 440px;
 }
 
+#slide-tcpforward-intro pre {
+  margin-top: 20px;
+}
+
 #slide-thanks img {
   height: 240px;
 }
