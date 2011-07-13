@@ -1,6 +1,8 @@
 # iocopy - an async io engine in 54 lines of C #
 
-To be presented at the [54lines meetup on July 12, 2011 in NYC](http://www.meetup.com/54lines/events/20962661/).
+Presented at the [54lines meetup on July 12, 2011 in NYC](http://www.meetup.com/54lines/events/20962661/).
+
+The slides are [hosted here](http://www.iobound.net/iocopy-talk/). You can also build them yourself with `cd talk && make`.
 
 ## Motivation ##
 
