@@ -44,7 +44,7 @@ int main(int argc, char** argv)
       for (j=0, fd=fds[i]; j<2; j++, fd++) {
         if ((j == len[i]>0) && (active[j] & (1<<i))) FD_SET(*fd, &fdset[j]);
         else FD_CLR(*fd, &fdset[j]);
-        if (!(active[j] & (1<<i))) shutdown(*fd, j?SHUT_WR:SHUT_RD);
+        if (!(active[j] & (1<<i))) j ? shutdown(*fd,SHUT_WR) : close(*fd);
       }
     }
   }
